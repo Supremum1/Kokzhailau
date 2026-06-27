@@ -44,9 +44,9 @@ document.querySelectorAll("[data-film-reel]").forEach((reel) => {
 
 const galleries = {
   house: [
-    ["дом.png", "Дом и окрестности"],
-    ["дом2.png", "Окрестности дома"],
-    ["дом3.png", "Kokzhailau Ecowood House"],
+    ["дом.webp", "Дом и окрестности"],
+    ["дом2.webp", "Окрестности дома"],
+    ["дом3.webp", "Kokzhailau Ecowood House"],
   ],
 };
 
