@@ -3465,3 +3465,121 @@ h1 em, h2 em { color: var(--moss); font-style: normal; font-weight: 300; }
     line-height: 1.42 !important;
   }
 }
+
+/* Hard mobile hero fit for real browser chrome viewports. */
+@media (max-width: 700px) {
+  .hero {
+    height: 100dvh !important;
+    min-height: 620px !important;
+    max-height: 100dvh !important;
+    padding: 78px 14px 14px !important;
+    align-items: end !important;
+    overflow: hidden !important;
+  }
+
+  .hero-copy {
+    min-height: 0 !important;
+    max-height: calc(100dvh - 92px) !important;
+    justify-content: flex-end !important;
+    gap: 0 !important;
+  }
+
+  .hero-copy .eyebrow {
+    max-width: 100% !important;
+    margin-bottom: 12px !important;
+    padding: 7px 10px !important;
+    overflow: hidden !important;
+    font-size: 9.5px !important;
+    letter-spacing: .1em !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .hero-copy .eyebrow > span {
+    width: 24px !important;
+    flex-basis: 24px !important;
+  }
+
+  .hero-copy h1 {
+    max-width: 330px !important;
+    font-size: clamp(30px, 9.2vw, 36px) !important;
+    line-height: .92 !important;
+  }
+
+  .hero-signature {
+    max-width: 270px !important;
+    margin: 8px 0 10px 6px !important;
+    font-size: clamp(26px, 8vw, 32px) !important;
+    line-height: .84 !important;
+    transform: rotate(-8deg) !important;
+  }
+
+  .hero-lead {
+    display: -webkit-box !important;
+    max-height: none !important;
+    margin: 0 0 12px !important;
+    overflow: hidden !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    font-size: 12.8px !important;
+    line-height: 1.34 !important;
+  }
+
+  .hero-actions {
+    gap: 0 !important;
+  }
+
+  .hero .button {
+    min-height: 52px !important;
+    padding: 0 14px !important;
+    font-size: 14px !important;
+    letter-spacing: .06em !important;
+  }
+
+  .hero .button i {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 380px), (max-height: 720px) {
+  .hero {
+    min-height: 560px !important;
+    padding-top: 72px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .hero-copy {
+    max-height: calc(100dvh - 84px) !important;
+  }
+
+  .hero-copy .eyebrow {
+    margin-bottom: 9px !important;
+    font-size: 8.8px !important;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(28px, 8.7vw, 34px) !important;
+  }
+
+  .hero-signature {
+    margin-bottom: 8px !important;
+    font-size: clamp(24px, 7.4vw, 30px) !important;
+  }
+
+  .hero-lead {
+    -webkit-line-clamp: 4;
+    margin-bottom: 10px !important;
+    font-size: 12.2px !important;
+    line-height: 1.3 !important;
+  }
+
+  .hero .button {
+    min-height: 48px !important;
+  }
+
+  .hero .button i {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
