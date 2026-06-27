@@ -2782,3 +2782,591 @@ h1 em, h2 em { color: var(--moss); font-style: normal; font-weight: 300; }
     max-width: none !important;
   }
 }
+
+/* Mobile overhaul: compact, readable, no sideways page drift. */
+@media (max-width: 700px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2 {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  img,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  .site-header {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    min-height: 58px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    gap: 8px;
+    transform: none !important;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 50px !important;
+    height: 34px !important;
+    flex: 0 0 50px;
+  }
+
+  .brand > span:not(.brand-logo) {
+    max-width: 108px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+
+  .main-nav {
+    display: none !important;
+  }
+
+  .header-cta {
+    min-height: 44px;
+    padding: 0 16px;
+    flex: 0 0 auto;
+    font-size: 13px;
+  }
+
+  .section-shell,
+  .bath-section {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    margin-inline: auto !important;
+  }
+
+  .section {
+    padding-top: 76px;
+    scroll-margin-top: 88px;
+  }
+
+  .eyebrow,
+  .section .eyebrow,
+  .house-intro .eyebrow,
+  .bath-copy .eyebrow,
+  .film-reel-heading .eyebrow,
+  .activities-heading .eyebrow {
+    max-width: 100%;
+    padding: 8px 12px;
+    gap: 8px;
+    font-size: 11px !important;
+    letter-spacing: .11em !important;
+    white-space: nowrap;
+  }
+
+  .eyebrow > span,
+  .section .eyebrow > span,
+  .house-intro .eyebrow > span,
+  .bath-copy .eyebrow > span,
+  .film-reel-heading .eyebrow > span,
+  .activities-heading .eyebrow > span {
+    width: 30px;
+    flex: 0 0 30px;
+  }
+
+  h1,
+  .hero-copy h1,
+  h2,
+  .section-heading h2,
+  .house-intro h2,
+  .bath-copy h2,
+  .final-cta h2 {
+    font-size: clamp(38px, 12.5vw, 54px) !important;
+    line-height: .94 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: 112px 14px 62px !important;
+    place-items: end start !important;
+  }
+
+  .hero-background {
+    inset: 0 !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+  }
+
+  .hero-background img {
+    object-position: 43% center;
+    opacity: .5;
+  }
+
+  .hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .hero-copy h1 {
+    max-width: 360px !important;
+  }
+
+  .hero-signature {
+    align-self: flex-start !important;
+    max-width: 330px !important;
+    margin: 16px 0 28px 14px !important;
+    font-size: clamp(34px, 10vw, 44px) !important;
+    transform: rotate(-8deg) !important;
+  }
+
+  .hero-lead {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 22px !important;
+    font-size: 15.5px !important;
+    line-height: 1.58 !important;
+  }
+
+  .hero-actions {
+    width: 100%;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .button {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .hero-note {
+    padding-left: 4px;
+  }
+
+  .facts {
+    width: calc(100% - 24px);
+    grid-template-columns: 1fr 1fr;
+    margin-top: 12px;
+    border-radius: 20px;
+  }
+
+  .facts article {
+    min-height: 98px;
+    padding: 16px 12px;
+  }
+
+  .facts strong {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .section-heading,
+  .interior-heading,
+  .film-reel-heading {
+    display: block !important;
+  }
+
+  .section-heading h2,
+  .film-reel-heading h2 {
+    margin-top: 28px;
+    text-align: left !important;
+  }
+
+  .nature-frame {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin-top: 34px !important;
+  }
+
+  .nature-frame figure {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1.12;
+    transform: none !important;
+    border-radius: 18px !important;
+  }
+
+  .nature-frame .center {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 1.26 / 1;
+  }
+
+  .atmosphere-text {
+    margin: 24px 0 0 !important;
+    padding: 0 !important;
+    border-left: 0 !important;
+    font-size: 16px;
+  }
+
+  .house-section {
+    padding-top: 86px !important;
+  }
+
+  .house-intro {
+    display: flex !important;
+    min-height: 0 !important;
+    padding: 24px 18px 20px !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    overflow: hidden !important;
+    border-radius: 24px !important;
+  }
+
+  .house-intro::before,
+  .house-intro::after {
+    display: none !important;
+  }
+
+  .house-intro > div {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .house-intro h2 {
+    width: 100% !important;
+    margin: 26px 0 16px !important;
+    font-size: clamp(38px, 11.2vw, 48px) !important;
+  }
+
+  .house-intro p:not(.eyebrow) {
+    max-width: none !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: rgba(31, 43, 36, .78) !important;
+  }
+
+  .house-illustration {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    order: 2 !important;
+    width: 112% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 4px 0 -10px -6% !important;
+    opacity: .95 !important;
+    transform: none !important;
+  }
+
+  .house-offer {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin-top: 14px !important;
+    align-items: stretch !important;
+  }
+
+  .price-card {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 22px 14px !important;
+    border-radius: 22px !important;
+  }
+
+  .price-card strong {
+    font-size: clamp(36px, 12vw, 48px) !important;
+    line-height: 1.08 !important;
+    word-break: keep-all;
+  }
+
+  .price-card p {
+    display: none;
+  }
+
+  .included {
+    display: flex !important;
+    margin-top: 14px !important;
+    padding: 14px !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    border-radius: 20px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .included strong,
+  .included span {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .house-photo-grid {
+    display: flex !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 14px !important;
+    gap: 12px !important;
+    overflow-x: auto !important;
+    padding-bottom: 10px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .house-photo-grid button,
+  .house-photo-grid button:nth-child(1),
+  .house-photo-grid button:nth-child(2),
+  .house-photo-grid button:nth-child(3) {
+    display: block !important;
+    width: 78vw !important;
+    height: 430px !important;
+    flex: 0 0 78vw !important;
+    transform: none !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    scroll-snap-align: start;
+  }
+
+  .interior-section {
+    padding-top: 84px !important;
+  }
+
+  .interior-heading h2 {
+    margin-top: 26px !important;
+    transform: none !important;
+  }
+
+  .interior-heading > p:not(.eyebrow) {
+    width: 100% !important;
+    max-width: none !important;
+    padding-top: 18px !important;
+    transform: none !important;
+    font-size: 16px !important;
+    line-height: 1.62 !important;
+  }
+
+  .room-views {
+    gap: 28px !important;
+    padding-left: 0 !important;
+    margin-top: 26px !important;
+  }
+
+  .room-row {
+    display: block !important;
+    padding: 18px 0 0 !important;
+    border-top: 1px solid rgba(31, 43, 36, .12);
+  }
+
+  .room-row > div:first-child {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 0 14px !important;
+    padding: 0 !important;
+  }
+
+  .room-row h3 {
+    margin: 6px 0 0 !important;
+    font-size: clamp(28px, 9vw, 38px) !important;
+    line-height: 1.05 !important;
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    text-align: left !important;
+  }
+
+  .row-scroll {
+    width: 100%;
+    gap: 10px !important;
+    padding: 0 0 10px !important;
+    align-items: stretch !important;
+    scroll-snap-type: x proximity !important;
+  }
+
+  .row-scroll img {
+    width: 78vw !important;
+    height: 360px !important;
+    flex: 0 0 78vw !important;
+    border-radius: 18px !important;
+    transform: none !important;
+  }
+
+  .bath-section {
+    margin-top: 86px !important;
+    padding: 26px 18px !important;
+    display: block !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+  }
+
+  .bath-copy h2 {
+    margin: 26px 0 18px !important;
+    font-size: clamp(36px, 10.8vw, 48px) !important;
+    color: #fff7e8 !important;
+  }
+
+  .bath-copy p:not(.eyebrow) {
+    max-width: none !important;
+    font-size: 16px !important;
+    line-height: 1.62 !important;
+    color: rgba(255, 247, 232, .9) !important;
+  }
+
+  .bath-price {
+    margin-top: 24px !important;
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    align-items: end !important;
+    gap: 14px !important;
+  }
+
+  .bath-price strong {
+    font-size: 44px !important;
+    line-height: 1 !important;
+    color: #fff7e8 !important;
+  }
+
+  .bath-price span {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    color: rgba(255, 247, 232, .85) !important;
+  }
+
+  .bath-gallery {
+    width: 100% !important;
+    margin-top: 28px !important;
+    gap: 10px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .bath-gallery img,
+  .bath-gallery img:first-child,
+  .bath-gallery img:nth-child(2),
+  .bath-gallery img:nth-child(3),
+  .bath-gallery img:nth-child(4),
+  .bath-gallery img:nth-child(5),
+  .bath-gallery img:nth-child(6),
+  .bath-gallery img:nth-child(7) {
+    width: 78vw !important;
+    height: 380px !important;
+    flex-basis: 78vw !important;
+    border-radius: 18px !important;
+  }
+
+  .activities-section {
+    padding-top: 86px !important;
+  }
+
+  .activity-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+    gap: 12px !important;
+    overflow-x: auto !important;
+    padding-bottom: 12px !important;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .activity-card,
+  .activity-card:nth-child(2),
+  .activity-card:nth-child(3) {
+    width: 84vw !important;
+    flex: 0 0 84vw !important;
+    margin-top: 0 !important;
+    padding: 10px !important;
+    border-radius: 22px !important;
+    scroll-snap-align: start;
+  }
+
+  .activity-card img,
+  .activity-photo-stack img,
+  .activity-photo-stack img:first-child {
+    height: 260px !important;
+    min-height: 0 !important;
+    border-radius: 16px !important;
+  }
+
+  .activity-card h3 {
+    font-size: 30px !important;
+    line-height: 1.05 !important;
+  }
+
+  .film-reel-section {
+    padding-top: 86px !important;
+  }
+
+  .curved-film {
+    left: 50% !important;
+    width: 100vw !important;
+    min-height: 300px !important;
+    margin-left: -50vw !important;
+    padding: 64px 0 !important;
+    overflow: hidden !important;
+  }
+
+  .film-group figure {
+    width: 220px !important;
+    height: 154px !important;
+    transform: none !important;
+  }
+
+  .final-cta {
+    width: calc(100% - 24px) !important;
+    padding: 42px 18px !important;
+    border-radius: 24px !important;
+  }
+
+  .footer {
+    width: calc(100% - 24px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand,
+  .copyright {
+    grid-column: auto !important;
+  }
+
+  .lightbox {
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+  }
+}
+
+@media (max-width: 380px) {
+  .header-cta {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .brand > span:not(.brand-logo) {
+    max-width: 92px;
+  }
+
+  h1,
+  .hero-copy h1,
+  h2,
+  .section-heading h2,
+  .house-intro h2,
+  .bath-copy h2,
+  .final-cta h2 {
+    font-size: clamp(34px, 11.5vw, 44px) !important;
+  }
+
+  .price-card strong {
+    font-size: 36px !important;
+  }
+}
