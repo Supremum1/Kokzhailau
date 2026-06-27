@@ -3621,7 +3621,7 @@ h1 em, h2 em { color: var(--moss); font-style: normal; font-weight: 300; }
   .hero-copy h1 {
     max-width: 360px !important;
     margin: 0 !important;
-    font-size: clamp(36px, 10.8vw, 44px) !important;
+    font-size: clamp(38px, 12.5vw, 54px) !important;
     line-height: .93 !important;
   }
 
@@ -3685,7 +3685,7 @@ h1 em, h2 em { color: var(--moss); font-style: normal; font-weight: 300; }
   }
 
   .hero-copy h1 {
-    font-size: clamp(31px, 9.8vw, 38px) !important;
+    font-size: clamp(34px, 11.5vw, 44px) !important;
   }
 
   .hero-signature {
